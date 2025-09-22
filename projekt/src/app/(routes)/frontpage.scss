@@ -1,0 +1,17 @@
+.listings-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    &__wrapper {
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            li {
+                border: 1px solid #d9d9d9;
+                border-radius: 8px;
+                padding: 1rem;
+            }
+        }
+    }
+}
