@@ -3,8 +3,11 @@ import './header.scss'
 import SwapHub from '../../../public/images/SwapHub.svg'
 import Link from "next/link";
 import AuthButtons from "../authbuttons";
+import { cookies } from "next/headers";
 
 export default function Header() {
+    const token = cookies().get("sh_token")?.value
+    const LoggedIn = typeof token === "string" && token.length > 0
     return (
         <>
             <nav className="navbar">
@@ -16,7 +19,7 @@ export default function Header() {
                         <Link className="active" href="/">Listings</Link>
                         <Link href="/">Community</Link>
                         <Link href="/contact">Contact</Link>
-                        <AuthButtons/>
+                        <AuthButtons LoggedIn={LoggedIn}/>
                     </div>
                 </div>
             </nav>

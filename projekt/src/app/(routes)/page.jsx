@@ -5,7 +5,7 @@ import './frontpage.scss';
 
 
 export default async function Home() {
-  const response = await fetch("http://localhost:4000/api/v1/listings");
+  const response = await fetch(`${process.env.API_BASE_URL}/listings`);
   const json = await response.json();
 
   return (
