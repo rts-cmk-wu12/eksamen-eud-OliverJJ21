@@ -1,12 +1,12 @@
+import ContactForm from "@/components/contact-form";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import RegisterForm from "@/components/register-form";
 
-export default function RegisterPage() {
+export default function ContactPage() {
     return (
         <>
             <Header />
-            <RegisterForm/>
+            <ContactForm />
             <Footer />
         </>
     )

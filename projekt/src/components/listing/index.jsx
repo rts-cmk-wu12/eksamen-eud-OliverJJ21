@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import './listingcard.scss'
+import '../../app/(routes)/frontpage.scss'
 
 export default function ListingsCard({listings}) {
 

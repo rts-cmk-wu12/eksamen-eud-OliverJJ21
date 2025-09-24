@@ -17,7 +17,7 @@
     .profile-info {
         display: flex;
         align-items: center;
-        .profile-user{
+        .profile-user {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
@@ -32,9 +32,22 @@
             text-decoration: underline;
             font-weight: 700;
         }
+    }
+    .profile-items {
+        .trade-title {
+            font-weight: 700;
+            text-align: center;
+            padding: 1rem;
+        }
+        .listings {
+            padding: 1rem;
 
-        .profile-items {
-            font-size: 30px;
+            .listing-card {
+                &__title {
+                    font-size: 25px;
+                    line-height: 2;
+                }
+            }
         }
     }
 }

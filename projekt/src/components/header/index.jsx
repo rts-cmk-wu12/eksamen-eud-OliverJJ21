@@ -1,3 +1,5 @@
+"use server";
+
 import Image from "next/image";
 import './header.scss'
 import SwapHub from '../../../public/images/SwapHub.svg'
@@ -5,8 +7,9 @@ import Link from "next/link";
 import AuthButtons from "../authbuttons";
 import { cookies } from "next/headers";
 
-export default function Header() {
-    const token = cookies().get("sh_token")?.value
+export default async function Header() {
+    const cookieStore = await cookies();
+    const token = cookieStore.get("sh_token")?.value;
     const LoggedIn = typeof token === "string" && token.length > 0
     return (
         <>

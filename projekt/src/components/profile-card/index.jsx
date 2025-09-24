@@ -4,7 +4,7 @@ import './profilecard.scss';
 
 
 export default async function ProfileCard({ users }) {
-    const listings = users.listings.length ? users.listings : await fetchListings(users.id) || [];
+    const listings = users.listings.length ? users.listings : (users.id);
     const hasListings = listings.length > 0;
 
     return (
@@ -17,15 +17,15 @@ export default async function ProfileCard({ users }) {
                     <p>Lastname: <span>{users.lastname}</span></p>
                 </div>
 
-
-            </div><div className="profile-items">
-                <p>Items:</p>
+            </div>
+            <div className="profile-items">
+                <p className='trade-title'>Trade Items:</p>
                 {hasListings ? (
                     <ul className="listings">
                         {listings.map(item => (
                             <li key={item.id} className="listing-card">
-                                <h4>{item.title}</h4>
-                                <p>{item.description}</p>
+                                <p className='listing-card__title'>{item.title}</p>
+                                <p className='listing-card__description'>{item.description}</p>
                             </li>
                         ))}
                     </ul>

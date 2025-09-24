@@ -1,7 +1,7 @@
-import ListingsCard from "@/components/listing";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import './frontpage.scss';
+import SearchForm from "@/components/searchbar";
 
 
 export default async function Home() {
@@ -12,15 +12,7 @@ export default async function Home() {
     <>
       <Header />
       <div className="listings-container">
-        <section className="listings-container__wrapper">
-          <ul>
-            {json.map(listings => (
-              <li key={listings.id}>
-                <ListingsCard listings={listings} />
-              </li>
-            ))}
-          </ul>
-        </section>
+        <SearchForm key={json}/>
       </div>
       <Footer />
     </>
