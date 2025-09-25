@@ -1,11 +1,11 @@
 "use client";
 
-import NewsletterValidation from "@/actions/newslettervalidation";
+import NewsletterAction from "@/actions/newsletteraction";
 import { useActionState } from "react";
 import './newsletter.scss'
 
 export default function Newsletter() {
-    const [formState, formAction] = useActionState(NewsletterValidation)
+    const [formState, formAction] = useActionState(NewsletterAction)
     return (
         <form action={formAction}>
             <div className="subscribe">

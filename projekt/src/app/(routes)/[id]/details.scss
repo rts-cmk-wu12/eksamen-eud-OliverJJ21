@@ -1,0 +1,40 @@
+.detail-container {
+    max-width: 1000px;
+    margin: auto;
+    gap: 3rem;
+    display: flex;
+
+    &__details {
+        display: flex;
+        max-width: 400px;
+        flex-direction: column;
+        gap: 2rem;
+
+        button {
+            margin-top: 6rem;
+            padding: 0.4rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1px solid #9e9ba3;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .date {
+            font-size: 14px;
+        }
+    }
+}
+
+.other-container {
+    max-width: 1000px;
+    margin: auto;
+    &__title {
+        margin-top: 3rem;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
